@@ -60,11 +60,17 @@ supabase start
 ```
 
 2. Deploy functions locally:
+First, you need to create an .env.local file at the root of the project with the following variables:
 ```bash
-supabase functions serve --import-map supabase/functions/import_map.json
+SENTRY_DSN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ENVIRONMENT=development
+```
+Then execute:
+```bash
+supabase functions serve --import-map supabase/functions/import_map.json --env-file .env.local
 ```
 
-3. Test the functions using the commands in `test-commands.txt`:
+3. Run the following command to test the functions:
 ```bash
 # Test function A locally
 curl -i --location --request POST 'http://localhost:54321/functions/v1/test-function-a' \
@@ -85,7 +91,7 @@ supabase link --project-ref <your-project-ref>
 supabase functions deploy
 ```
 
-3. Test production functions using the commands in `test-commands.txt`
+3. Test the production functions using the same command as in the 'Local development' section, replacing the host with your production URI.
 
 ## 📊 Sentry Integration
 
