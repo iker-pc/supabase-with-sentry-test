@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./",
+      "paths": {
+        "@sentry": ["supabase/functions/_shared/sentry.ts"],
+        "@log": ["supabase/functions/_shared/log.ts"]
+      },
+      "strict": true,
+      "module": "esnext",
+      "target": "esnext"
+    },
+    "include": [
+      "supabase/functions/**/*.ts",
+      "deno-globals.d.ts"
+    ],
+}

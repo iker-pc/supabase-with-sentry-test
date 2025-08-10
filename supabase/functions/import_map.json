@@ -1,0 +1,6 @@
+{
+    "imports": {
+      "@sentry": "./_shared/sentry.ts",
+      "@log": "./_shared/log.ts"
+    }
+  }

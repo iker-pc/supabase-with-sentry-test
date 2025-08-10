@@ -1,0 +1,9 @@
+.vscode/
+
+supabase/.branches
+supabase/.temp
+supabase/config.toml
+
+test-commands.txt
+
+.env.local
